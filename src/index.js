@@ -211,7 +211,7 @@ class EntityDB {
   }
 
   // Delete all embeddings in the datastore
-  async deleteALL() {
+  async deleteAll() {
     const db = await this.dbPromise;
     const transaction = db.transaction("vectors", "readwrite");
     const store = transaction.objectStore("vectors");

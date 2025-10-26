@@ -120,7 +120,7 @@ await db.delete(1);
 You can delete all the records and reset the db.
 
 ```js
-await db.deleteALL();
+await db.deleteAll();
 ```
 
 ---
