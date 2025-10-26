@@ -10,6 +10,7 @@ declare module "@babycommando/entity-db" {
 
     update(key: number, data: { [key: string]: any }): Promise<void>;
     delete(key: number): Promise<void>;
+    deleteAll(): Promise<void>;
 
     query(
       queryText: string,
