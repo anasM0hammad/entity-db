@@ -115,6 +115,16 @@ await db.delete(1);
 
 ---
 
+### Deleting all records in data store
+
+You can delete all the records and reset the db.
+
+```js
+await db.deleteALL();
+```
+
+---
+
 ## Experimental: Binary Vectors
 
 While querying vectors by cosine similarity is already extremely fast, sometimes you want to go faster than light. Binary vectors are simplified versions of dense vectors where each value is turned into either a 0 or a 1 by comparing it to the middle value (median). This makes them smaller to store and faster to compare, which helps when working with a lot of data.

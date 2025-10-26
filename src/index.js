@@ -210,6 +210,14 @@ class EntityDB {
     await store.delete(key);
   }
 
+  // Delete all embeddings in the datastore
+  async deleteALL() {
+    const db = await this.dbPromise;
+    const transaction = db.transaction("vectors", "readwrite");
+    const store = transaction.objectStore("vectors");
+    await store.clear();
+  }
+
   // Query vectors by cosine similarity (using a text input that will be converted into embeddings)
   async query(queryText, { limit = 10 } = {}) {
     try {
